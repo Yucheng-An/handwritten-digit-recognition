@@ -80,3 +80,18 @@ with torch.no_grad():
 print(f"Testset Accuracy: {100 * correct / total:.2f}%")
 
 
+images, labels = next(iter(testloader))
+model.eval()
+outputs = model(images.to(device))
+_, predicted = torch.max(outputs, 1)
+fig, axes = plt.subplots(2, 5, figsize=(10, 5))
+axes = axes.flatten()
+
+for i in range(10):
+    img = images[i].numpy().squeeze()
+    axes[i].imshow(img, cmap="gray")
+    axes[i].set_title(f"Predicted: {predicted[i].item()}")
+    axes[i].axis("off")
+
+plt.show()
+
