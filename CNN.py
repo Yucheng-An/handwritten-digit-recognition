@@ -39,7 +39,7 @@ class CNN(nn.Module):
         x = self.relu(self.fc1(x))
         x = self.fc2(x)
         return x
-
+print("Module setup completed!")
 model = CNN()
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
