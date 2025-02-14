@@ -1,8 +1,18 @@
+.idea
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+.DS_Store
+__pycache__
+.enve
+.venv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.xml
 # C extensions
 *.so
 
