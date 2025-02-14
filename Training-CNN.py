@@ -71,6 +71,10 @@ for epoch in range(num_epochs):
 
 print("Training Completed!")
 
+
+
+
+
 model.eval()
 correct = 0
 total = 0
